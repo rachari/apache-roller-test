@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: org.apache.roller.planet.business.RomeFeedFetcherTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 30.068 sec <<< FAILURE! - in org.apache.roller.planet.business.RomeFeedFetcherTest
+testFetchFeed(org.apache.roller.planet.business.RomeFeedFetcherTest)  Time elapsed: 15.033 sec  <<< ERROR!
+org.apache.roller.planet.business.fetcher.FetcherException: Error fetching subscription - http://rollerweblogger.org/roller/feed/entries/atom
+	at org.apache.roller.planet.business.fetcher.RomeFeedFetcher.fetchSubscription(RomeFeedFetcher.java:90)
+	at org.apache.roller.weblogger.planet.business.WebloggerRomeFeedFetcher.fetchSubscription(WebloggerRomeFeedFetcher.java:73)
+	at org.apache.roller.planet.business.fetcher.RomeFeedFetcher.fetchSubscription(RomeFeedFetcher.java:67)
+	at org.apache.roller.planet.business.RomeFeedFetcherTest.testFetchFeed(RomeFeedFetcherTest.java:56)
+
+testFetchFeedConditionally(org.apache.roller.planet.business.RomeFeedFetcherTest)  Time elapsed: 15.015 sec  <<< ERROR!
+org.apache.roller.planet.business.fetcher.FetcherException: Error fetching subscription - http://rollerweblogger.org/roller/feed/entries/atom
+	at org.apache.roller.planet.business.fetcher.RomeFeedFetcher.fetchSubscription(RomeFeedFetcher.java:90)
+	at org.apache.roller.weblogger.planet.business.WebloggerRomeFeedFetcher.fetchSubscription(WebloggerRomeFeedFetcher.java:73)
+	at org.apache.roller.planet.business.fetcher.RomeFeedFetcher.fetchSubscription(RomeFeedFetcher.java:67)
+	at org.apache.roller.planet.business.RomeFeedFetcherTest.testFetchFeedConditionally(RomeFeedFetcherTest.java:76)
+

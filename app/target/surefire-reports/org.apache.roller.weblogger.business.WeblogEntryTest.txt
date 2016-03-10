@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: org.apache.roller.weblogger.business.WeblogEntryTest
+-------------------------------------------------------------------------------
+Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.386 sec - in org.apache.roller.weblogger.business.WeblogEntryTest

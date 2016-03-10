@@ -1,0 +1,9 @@
+-------------------------------------------------------------------------------
+Test set: org.apache.roller.planet.business.SingleThreadedFeedUpdaterTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 15.77 sec <<< FAILURE! - in org.apache.roller.planet.business.SingleThreadedFeedUpdaterTest
+testUpdateSubscription(org.apache.roller.planet.business.SingleThreadedFeedUpdaterTest)  Time elapsed: 15.768 sec  <<< ERROR!
+org.apache.roller.planet.business.updater.UpdaterException: Error fetching updated subscription
+	at org.apache.roller.planet.business.updater.SingleThreadedFeedUpdater.updateSubscription(SingleThreadedFeedUpdater.java:72)
+	at org.apache.roller.planet.business.SingleThreadedFeedUpdaterTest.testUpdateSubscription(SingleThreadedFeedUpdaterTest.java:67)
+

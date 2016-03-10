@@ -1,0 +1,35 @@
+Feb 08, 2015 9:42:55 AM org.apache.catalina.core.ApplicationContext log
+INFO: No Spring WebApplicationInitializer types detected on classpath
+Feb 08, 2015 9:42:56 AM org.apache.catalina.core.ApplicationContext log
+INFO: Initializing Spring root WebApplicationContext
+Feb 08, 2015 10:04:13 AM org.apache.catalina.core.ApplicationFilterConfig release
+SEVERE: Failed to destroy the filter named [struts2] of type [org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter]
+java.lang.NoClassDefFoundError: org/apache/struts2/util/ObjectFactoryDestroyable
+	at org.apache.struts2.dispatcher.Dispatcher.cleanup(Dispatcher.java:295)
+	at org.apache.struts2.dispatcher.ng.PrepareOperations.cleanupDispatcher(PrepareOperations.java:181)
+	at org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter.destroy(StrutsPrepareAndExecuteFilter.java:108)
+	at org.apache.catalina.core.ApplicationFilterConfig.release(ApplicationFilterConfig.java:313)
+	at org.apache.catalina.core.StandardContext.filterStop(StandardContext.java:4845)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5651)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:232)
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3981)
+	at org.apache.catalina.startup.HostConfig.reload(HostConfig.java:1482)
+	at org.apache.catalina.startup.HostConfig.checkResources(HostConfig.java:1465)
+	at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1649)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:328)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1374)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1530)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1540)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1519)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassNotFoundException: org.apache.struts2.util.ObjectFactoryDestroyable
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1720)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1571)
+	... 19 more
+
+Feb 08, 2015 10:06:59 AM org.apache.catalina.core.ApplicationContext log
+INFO: No Spring WebApplicationInitializer types detected on classpath
+Feb 08, 2015 10:06:59 AM org.apache.catalina.core.ApplicationContext log
+INFO: Initializing Spring root WebApplicationContext

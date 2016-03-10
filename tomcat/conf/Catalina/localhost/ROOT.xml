@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/roller" docBase="/Users/dave/src/roller_trunk/app/target/roller">
+
+    <Resource name="jdbc/rollerdb" 
+        auth="Container"
+        type="javax.sql.DataSource"
+        driverClassName="com.mysql.jdbc.Driver"
+        url="jdbc:mysql://localhost/rwo_turkey?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;mysqlEncoding=utf8"
+        username="scott" 
+        password="tiger"
+        maxActive="25" 
+        removeAbandoned="true" 
+        maxIdle="5" 
+        maxWait="3000"
+    />
+
+</Context>

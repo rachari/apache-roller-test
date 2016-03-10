@@ -1,0 +1,79 @@
+Listening for transport dt_socket at address: 8000
+Feb 08, 2015 9:42:49 AM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /Users/dave/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+Feb 08, 2015 9:42:49 AM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8080"]
+Feb 08, 2015 9:42:49 AM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-bio-8009"]
+Feb 08, 2015 9:42:49 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 920 ms
+Feb 08, 2015 9:42:49 AM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Catalina
+Feb 08, 2015 9:42:49 AM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.54
+Feb 08, 2015 9:42:49 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor /Users/dave/src/roller_trunk/tomcat/conf/Catalina/localhost/ROOT.xml
+Roller Weblogger: Successfully loaded custom properties file from classpath
+File path : /Users/dave/src/roller_trunk/tomcat/lib/roller-custom.properties
+(To run eclipse junit local tests see docs/testing/roller-junit.properties)
+[EL Info]: 2015-02-08 09:43:00.331--ServerSession(145732934)--EclipseLink, version: Eclipse Persistence Services - 2.5.2.v20140319-9ad6abd
+[EL Info]: connection: 2015-02-08 09:43:00.592--ServerSession(145732934)--file:/Users/dave/src/roller_trunk/app/target/roller/WEB-INF/classes/_RollerPU_nonJtaDataSource=java:comp/env/jdbc/rollerdb login successful
+Feb 08, 2015 9:43:02 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deployment of configuration descriptor /Users/dave/src/roller_trunk/tomcat/conf/Catalina/localhost/ROOT.xml has finished in 13,030 ms
+Feb 08, 2015 9:43:02 AM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8080"]
+Feb 08, 2015 9:43:02 AM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-bio-8009"]
+Feb 08, 2015 9:43:02 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 13107 ms
+[EL Warning]: 2015-02-08 09:45:00.424--UnitOfWork(440569740)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.5.2.v20140319-9ad6abd): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Incorrect datetime value: '1969-12-31 19:00:00' for column 'last_updated' at row 1
+Error Code: 1292
+Call: INSERT INTO rag_subscription (id, author, feed_url, inbound_blogs, inbound_links, last_updated, site_url, title) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [8 parameters bound]
+Query: InsertObjectQuery({weblogger:roller, http://localhost:8080/roller/, Blogging Roller, Blogging Roller, Wed Dec 31 19:00:00 EST 1969})
+Feb 08, 2015 9:46:16 AM org.apache.jasper.compiler.TldLocationsCache tldScanJar
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+[EL Warning]: 2015-02-08 09:50:00.075--UnitOfWork(1432417424)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.5.2.v20140319-9ad6abd): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Incorrect datetime value: '1969-12-31 19:00:00' for column 'last_updated' at row 1
+Error Code: 1292
+Call: INSERT INTO rag_subscription (id, author, feed_url, inbound_blogs, inbound_links, last_updated, site_url, title) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [8 parameters bound]
+Query: InsertObjectQuery({weblogger:apptest, http://localhost:8080/apptest/, Atom heart mother, Atom heart mother, Wed Dec 31 19:00:00 EST 1969})
+[EL Warning]: 2015-02-08 09:55:00.075--UnitOfWork(1187808829)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.5.2.v20140319-9ad6abd): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Incorrect datetime value: '1969-12-31 19:00:00' for column 'last_updated' at row 1
+Error Code: 1292
+Call: INSERT INTO rag_subscription (id, author, feed_url, inbound_blogs, inbound_links, last_updated, site_url, title) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [8 parameters bound]
+Query: InsertObjectQuery({weblogger:apptest, http://localhost:8080/apptest/, Atom heart mother, Atom heart mother, Wed Dec 31 19:00:00 EST 1969})
+[EL Warning]: 2015-02-08 10:00:00.082--UnitOfWork(940288570)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.5.2.v20140319-9ad6abd): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Incorrect datetime value: '1969-12-31 19:00:00' for column 'last_updated' at row 1
+Error Code: 1292
+Call: INSERT INTO rag_subscription (id, author, feed_url, inbound_blogs, inbound_links, last_updated, site_url, title) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [8 parameters bound]
+Query: InsertObjectQuery({weblogger:apptest, http://localhost:8080/apptest/, Atom heart mother, Atom heart mother, Wed Dec 31 19:00:00 EST 1969})
+Feb 08, 2015 10:04:13 AM org.apache.catalina.startup.HostConfig reload
+INFO: Reloading context []
+Feb 08, 2015 10:04:13 AM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+Feb 08, 2015 10:04:13 AM org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+SEVERE: The web application [] appears to have started a thread named [com.google.inject.internal.util.$Finalizer] but has failed to stop it. This is very likely to create a memory leak.
+Feb 08, 2015 10:04:13 AM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+SEVERE: The web application [] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@35aa2ca4]) and a value of type [com.opensymphony.xwork2.inject.ContainerImpl] (value [com.opensymphony.xwork2.inject.ContainerImpl@3758de82]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+Feb 08, 2015 10:04:13 AM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+Feb 08, 2015 10:06:54 AM org.apache.catalina.startup.HostConfig reload
+INFO: Reloading context []
+Feb 08, 2015 10:06:54 AM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+Roller Weblogger: Successfully loaded custom properties file from classpath
+File path : /Users/dave/src/roller_trunk/tomcat/lib/roller-custom.properties
+(To run eclipse junit local tests see docs/testing/roller-junit.properties)
+Exception in thread "ContainerBackgroundProcessor[StandardEngine[Catalina]]" 
+Exception: java.lang.OutOfMemoryError thrown from the UncaughtExceptionHandler in thread "ContainerBackgroundProcessor[StandardEngine[Catalina]]"
+Feb 08, 2015 3:02:40 PM org.apache.catalina.core.StandardServer await
+INFO: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+Feb 08, 2015 3:02:40 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-bio-8080"]
+Feb 08, 2015 3:02:40 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-bio-8009"]

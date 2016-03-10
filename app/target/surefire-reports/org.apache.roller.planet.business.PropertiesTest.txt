@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: org.apache.roller.planet.business.PropertiesTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.778 sec - in org.apache.roller.planet.business.PropertiesTest

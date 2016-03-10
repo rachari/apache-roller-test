@@ -1,0 +1,71 @@
+
+
+01234567890123456789012345678901234567890123456789012345678901234567890123456789
+          1         2         3         4         5         6         7         
+
+Here are some comments on the code as of May 10, 2009 
+
+Improvements
+   * Should store media-files on disk with three letter extension
+   * Should maintain original aspect ratio when resizing images for thumbnails
+   * Should maintain original aspect ratio when user sets image width and height
+   * When Attaching uploaded file, should initially show search results on type image
+   * After editing a media file, should update title if it changed
+   * Insert button doesn't really stand out, wasn't clear how this page worked at first
+   * Like rest of Rollerc, new UI needs some work to make it aesthetically pleasing
+
+RFE: better bandwidth and UI via true thumbnails
+   * Store real thumbnails instead of resizing image in browser
+   * Create and store small, medium and large thumbnails on disk for each media file
+   * Small for view media page. Allow users to choose a size when linking to image
+   * Add media from URL should save metadata for image and store thumbnail
+
+
+
+
+
+
+First, I added an Authentication Delegate page to Roller
+SocialSite calls this page to verify Gadget's assertions about who the user is
+Since SocialSite handed us back our cookie, we can use Servlet API to find the logged in user
+Then we lookup the viewer and owner users in Roller database
+And then form the JSON response, which you can see here
+
+Once SocialSite knows the viewer, it knows what data it can return
+Next I had to configure SocialSite to trust my authentication delegate
+This is done in a SocialSite configuration file, which you can see here
+
+First, we configurate it to trust nobody
+Then we add an exception for our Authentication Delegate socailsite_context.jsp
+To add gadgest to Roller pages, you use the Roller template editor
+Here's a Gadget test page that displays one Gadget
+At the start, here's the JavaScript include and the context declaration
+And here's the addGadget() call where we include our Gadget via Gadget Spec URL
+
+In Roller show:
+  Dashboard page
+    Browse Activities
+    Browse Friends, add friend, send message
+    Browse Messages, show Sent folder
+  Profile page
+    Review gadgets
+    Update status
+    Edit profile
+    Show gadget directory
+    Send message via Friends gadget
+    
+
+Demonstrate creating, registering and installing a new Gadget
+  Open Roller editor UI, create new page template
+    Into new page, paste code for a Hello World gadget, save it
+    Do a "copy" on page's URL
+  Go to Profile page
+    Install Developer Gadget
+    Register new Hello World Gadget
+  Go to SocialSite Admin console
+    Approve new gadget 
+  Go to Profile page 
+    Use Gadget directory to install gadget
+    
+    
+    

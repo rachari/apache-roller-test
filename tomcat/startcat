@@ -1,0 +1,6 @@
+rm logs/*
+#startdb
+export CATALINA_BASE=/Users/dave/src/roller_trunk/tomcat
+rm -rf $CATALINA_BASE/logs/*
+catalina.sh jpda start
+

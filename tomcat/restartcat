@@ -1,0 +1,3 @@
+export CATALINA_BASE=/Users/dave/src/roller_trunk/tomcat
+./stopcat; rm ${CATALINA_BASE}/logs/*; ./startcat
+

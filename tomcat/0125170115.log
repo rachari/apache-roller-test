@@ -1,0 +1,17 @@
+efax v 0.9a-001114 Copyright 1999 Ed Casas. Compiled Sep  9 2014 16:24:18
+efax: Sun Jan 25 17:01:15 2015 argv[0]=efax
+efax: 01:15 argv[1]=-v
+efax: 01:15 argv[2]=ewin
+efax: 01:15 argv[3]=-v
+efax: 01:15 argv[4]=chewmainrxtf
+efax: 01:15 argv[5]=-d/dev/cu.usbmodem
+efax: 01:15 argv[6]=-iZ
+efax: 01:15 argv[7]=-i&FE0&D2S7=120
+efax: 01:15 argv[8]=-iM1L0
+efax: 01:15 argv[9]=-o1
+efax: 01:15 argv[10]=-l
+efax: 01:15 argv[11]=
+efax: 01:15 argv[12]=-kZ
+efax: 01:15 argv[13]=-r
+efax: 01:15 argv[14]=0125170115
+efax: 01:15 waiting for modem

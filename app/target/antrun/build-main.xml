@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+ <!-- <taskdef name="texen" classname="org.apache.velocity.texen.ant.TexenTask" classpathref="maven.compile.classpath"/>
+  <texen outputFile="README.txt" controlTemplate="control.vm" outputDirectory="/tmp/roller-weblogger-5.1.2-source/app/target/dbscripts" templatePath="/tmp/roller-weblogger-5.1.2-source/app/src/main/resources/sql" contextProperties="/tmp/roller-weblogger-5.1.2-source/app/src/main/resources/sql/dbscripts.properties"/>-->
+</target>
+</project>

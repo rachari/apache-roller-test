@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/roller" docBase="/Users/dave/src/roller_trunk/weblogger-webapp/target/roller">
+<!--
+<Context path="/roller" docBase="/Users/dave/src/roller_testing/roller-weblogger-5.0.0-RC3-tomcat/webapp/roller-5.0.0-RC3-tomcat.war">
+-->
+<!--
+<Resource name="mail/Session" auth="Container" type="javax.mail.Session" mail.smtp.host="smtp-server.nc.rr.com"/>
+-->
+</Context>

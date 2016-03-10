@@ -1,0 +1,503 @@
+INFO  2015-12-01 02:38:45,401 DatabaseProvider:successMessage - SUCCESS: Got parameters. Using configuration type JDBC_PROPERTIES
+INFO  2015-12-01 02:38:45,406 DatabaseProvider:successMessage - -- Using JDBC driver class: org.apache.derby.jdbc.ClientDriver
+INFO  2015-12-01 02:38:45,407 DatabaseProvider:successMessage - -- Using JDBC connection URL: jdbc:derby://localhost:4224/memory:rollerdb
+INFO  2015-12-01 02:38:45,407 DatabaseProvider:successMessage - -- Using JDBC username: APP
+INFO  2015-12-01 02:38:45,407 DatabaseProvider:successMessage - -- Using JDBC password: [hidden]
+INFO  2015-12-01 02:38:45,507 DatabaseProvider:successMessage - SUCCESS: loaded JDBC driver class [org.apache.derby.jdbc.ClientDriver]
+WARN  2015-12-01 02:38:47,743 WebloggerStartup:prepare - Failed to setup mail provider, continuing anyways.
+Reason: ERROR looking up mail-session with JNDI name: java:comp/env/mail/Session
+ERROR 2015-12-01 02:38:49,232 DatabaseInstaller:getDatabaseVersion - Couldn't lookup current database version
+java.sql.SQLSyntaxErrorException: Table/View 'ROLLER_PROPERTIES' does not exist.
+	at org.apache.derby.client.am.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.client.am.SqlException.getSQLException(Unknown Source)
+	at org.apache.derby.client.am.ClientStatement.executeQuery(Unknown Source)
+	at org.apache.roller.weblogger.business.startup.DatabaseInstaller.getDatabaseVersion(DatabaseInstaller.java:809)
+	at org.apache.roller.weblogger.business.startup.DatabaseInstaller.isUpgradeRequired(DatabaseInstaller.java:102)
+	at org.apache.roller.weblogger.business.startup.WebloggerStartup.prepare(WebloggerStartup.java:189)
+	at org.apache.roller.weblogger.TestUtils.setupWeblogger(TestUtils.java:74)
+	at org.apache.roller.planet.business.PropertiesTest.setUp(PropertiesTest.java:41)
+	at junit.framework.TestCase.runBare(TestCase.java:139)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:252)
+	at junit.framework.TestSuite.run(TestSuite.java:247)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:86)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:264)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: ERROR 42X05: Table/View 'ROLLER_PROPERTIES' does not exist.
+	at org.apache.derby.client.am.ClientStatement.completeSqlca(Unknown Source)
+	at org.apache.derby.client.net.NetStatementReply.parsePrepareError(Unknown Source)
+	at org.apache.derby.client.net.NetStatementReply.parsePRPSQLSTTreply(Unknown Source)
+	at org.apache.derby.client.net.NetStatementReply.readPrepareDescribeOutput(Unknown Source)
+	at org.apache.derby.client.net.StatementReply.readPrepareDescribeOutput(Unknown Source)
+	at org.apache.derby.client.net.NetStatement.readPrepareDescribeOutput_(Unknown Source)
+	at org.apache.derby.client.am.ClientStatement.readPrepareDescribeOutput(Unknown Source)
+	at org.apache.derby.client.am.ClientStatement.flowExecute(Unknown Source)
+	at org.apache.derby.client.am.ClientStatement.executeQueryX(Unknown Source)
+	... 20 more
+ERROR 2015-12-01 02:38:49,380 DatabaseInstaller:errorMessage - ERROR setting database version
+INFO  2015-12-01 02:38:52,726 WebloggerFactory:bootstrap - Bootstrapping Roller Weblogger business tier
+INFO  2015-12-01 02:38:52,736 WebloggerFactory:bootstrap - Weblogger Provider = org.apache.roller.weblogger.business.GuiceWebloggerProvider
+INFO  2015-12-01 02:38:52,739 DatabaseProvider:successMessage - SUCCESS: Got parameters. Using configuration type JDBC_PROPERTIES
+INFO  2015-12-01 02:38:52,740 DatabaseProvider:successMessage - -- Using JDBC driver class: org.apache.derby.jdbc.ClientDriver
+INFO  2015-12-01 02:38:52,753 DatabaseProvider:successMessage - -- Using JDBC connection URL: jdbc:derby://localhost:4224/memory:rollerdb
+INFO  2015-12-01 02:38:52,753 DatabaseProvider:successMessage - -- Using JDBC username: APP
+INFO  2015-12-01 02:38:52,753 DatabaseProvider:successMessage - -- Using JDBC password: [hidden]
+INFO  2015-12-01 02:38:52,774 DatabaseProvider:successMessage - SUCCESS: loaded JDBC driver class [org.apache.derby.jdbc.ClientDriver]
+INFO  2015-12-01 02:38:52,886 JPAPersistenceStrategy:<init> - hibernate.transaction.manager_lookup_class: org.hibernate.transaction.JBossTransactionManagerLookup
+INFO  2015-12-01 02:38:52,887 JPAPersistenceStrategy:<init> - eclipselink.persistence-context.flush-mode: auto
+INFO  2015-12-01 02:38:52,888 JPAPersistenceStrategy:<init> - hibernate.transaction.factory_class: org.hibernate.transaction.JDBCTransactionFactory
+INFO  2015-12-01 02:38:52,910 JPAPersistenceStrategy:<init> - hibernate.dialect: org.hibernate.dialect.DerbyDialect
+INFO  2015-12-01 02:39:00,680 IndexManagerImpl:<init> - search enabled: true
+INFO  2015-12-01 02:39:00,681 IndexManagerImpl:<init> - index dir: /tmp/roller-weblogger-5.1.2-source/app/target/test-classes/index
+INFO  2015-12-01 02:39:00,712 ThreadManagerImpl:<init> - Instantiating Thread Manager
+INFO  2015-12-01 02:39:00,719 WebloggerFactory:bootstrap - Roller Weblogger business tier successfully bootstrapped
+INFO  2015-12-01 02:39:00,719 WebloggerFactory:bootstrap -    Version: 5.1.2
+INFO  2015-12-01 02:39:00,719 WebloggerFactory:bootstrap -    Revision: rUNKNOWN
+INFO  2015-12-01 02:39:00,720 WebloggerImpl:initialize - Initializing Roller Weblogger business tier
+INFO  2015-12-01 02:39:03,830 JPAPropertiesManagerImpl:initializeMissingProps - Property site.name not yet in roller_properties database table, will store with default value of [Roller Site`]
+INFO  2015-12-01 02:39:03,831 JPAPropertiesManagerImpl:initializeMissingProps - Property site.shortName not yet in roller_properties database table, will store with default value of [Front Page`]
+INFO  2015-12-01 02:39:03,831 JPAPropertiesManagerImpl:initializeMissingProps - Property site.description not yet in roller_properties database table, will store with default value of [A default install of the Roller Weblogger open source blog server`]
+INFO  2015-12-01 02:39:03,831 JPAPropertiesManagerImpl:initializeMissingProps - Property site.frontpage.weblog.handle not yet in roller_properties database table, will store with default value of [`]
+INFO  2015-12-01 02:39:03,831 JPAPropertiesManagerImpl:initializeMissingProps - Property site.frontpage.weblog.aggregated not yet in roller_properties database table, will store with default value of [false`]
+INFO  2015-12-01 02:39:03,832 JPAPropertiesManagerImpl:initializeMissingProps - Property site.adminemail not yet in roller_properties database table, will store with default value of [`]
+INFO  2015-12-01 02:39:03,832 JPAPropertiesManagerImpl:initializeMissingProps - Property site.absoluteurl not yet in roller_properties database table, will store with default value of [`]
+INFO  2015-12-01 02:39:03,832 JPAPropertiesManagerImpl:initializeMissingProps - Property pings.suspendPingProcessing not yet in roller_properties database table, will store with default value of [false`]
+INFO  2015-12-01 02:39:03,832 JPAPropertiesManagerImpl:initializeMissingProps - Property users.registration.enabled not yet in roller_properties database table, will store with default value of [false`]
+INFO  2015-12-01 02:39:03,832 JPAPropertiesManagerImpl:initializeMissingProps - Property user.account.email.activation not yet in roller_properties database table, will store with default value of [false`]
+INFO  2015-12-01 02:39:03,833 JPAPropertiesManagerImpl:initializeMissingProps - Property users.registration.url not yet in roller_properties database table, will store with default value of [`]
+INFO  2015-12-01 02:39:03,833 JPAPropertiesManagerImpl:initializeMissingProps - Property site.allowUserWeblogCreation not yet in roller_properties database table, will store with default value of [true`]
+INFO  2015-12-01 02:39:03,833 JPAPropertiesManagerImpl:initializeMissingProps - Property users.editor.pages not yet in roller_properties database table, will store with default value of [editor-text.jsp,editor-xinha.jsp`]
+INFO  2015-12-01 02:39:03,833 JPAPropertiesManagerImpl:initializeMissingProps - Property webservices.enableXmlRpc not yet in roller_properties database table, will store with default value of [false`]
+INFO  2015-12-01 02:39:03,834 JPAPropertiesManagerImpl:initializeMissingProps - Property webservices.enableAtomPub not yet in roller_properties database table, will store with default value of [false`]
+INFO  2015-12-01 02:39:03,834 JPAPropertiesManagerImpl:initializeMissingProps - Property webservices.atomPubAuth not yet in roller_properties database table, will store with default value of [basic`]
+INFO  2015-12-01 02:39:03,834 JPAPropertiesManagerImpl:initializeMissingProps - Property site.pages.maxEntries not yet in roller_properties database table, will store with default value of [30`]
+INFO  2015-12-01 02:39:03,834 JPAPropertiesManagerImpl:initializeMissingProps - Property site.newsfeeds.defaultEntries not yet in roller_properties database table, will store with default value of [30`]
+INFO  2015-12-01 02:39:03,834 JPAPropertiesManagerImpl:initializeMissingProps - Property site.newsfeeds.styledFeeds not yet in roller_properties database table, will store with default value of [true`]
+INFO  2015-12-01 02:39:03,834 JPAPropertiesManagerImpl:initializeMissingProps - Property users.comments.enabled not yet in roller_properties database table, will store with default value of [true`]
+INFO  2015-12-01 02:39:03,835 JPAPropertiesManagerImpl:initializeMissingProps - Property comments.ignoreSpam.enabled not yet in roller_properties database table, will store with default value of [false`]
+INFO  2015-12-01 02:39:03,835 JPAPropertiesManagerImpl:initializeMissingProps - Property users.trackbacks.enabled not yet in roller_properties database table, will store with default value of [true`]
+INFO  2015-12-01 02:39:03,835 JPAPropertiesManagerImpl:initializeMissingProps - Property trackbacks.ignoreSpam.enabled not yet in roller_properties database table, will store with default value of [true`]
+INFO  2015-12-01 02:39:03,835 JPAPropertiesManagerImpl:initializeMissingProps - Property users.comments.htmlenabled not yet in roller_properties database table, will store with default value of [false`]
+INFO  2015-12-01 02:39:03,835 JPAPropertiesManagerImpl:initializeMissingProps - Property users.comments.plugins not yet in roller_properties database table, will store with default value of [HTMLSubset`]
+INFO  2015-12-01 02:39:03,836 JPAPropertiesManagerImpl:initializeMissingProps - Property users.comments.emailnotify not yet in roller_properties database table, will store with default value of [false`]
+INFO  2015-12-01 02:39:03,836 JPAPropertiesManagerImpl:initializeMissingProps - Property users.moderation.required not yet in roller_properties database table, will store with default value of [false`]
+INFO  2015-12-01 02:39:03,836 JPAPropertiesManagerImpl:initializeMissingProps - Property site.trackbackVerification.enabled not yet in roller_properties database table, will store with default value of [false`]
+INFO  2015-12-01 02:39:03,836 JPAPropertiesManagerImpl:initializeMissingProps - Property uploads.enabled not yet in roller_properties database table, will store with default value of [true`]
+INFO  2015-12-01 02:39:03,836 JPAPropertiesManagerImpl:initializeMissingProps - Property uploads.types.allowed not yet in roller_properties database table, will store with default value of [`]
+INFO  2015-12-01 02:39:03,837 JPAPropertiesManagerImpl:initializeMissingProps - Property uploads.types.forbid not yet in roller_properties database table, will store with default value of [exe`]
+INFO  2015-12-01 02:39:03,837 JPAPropertiesManagerImpl:initializeMissingProps - Property uploads.file.maxsize not yet in roller_properties database table, will store with default value of [2.00`]
+INFO  2015-12-01 02:39:03,837 JPAPropertiesManagerImpl:initializeMissingProps - Property uploads.dir.maxsize not yet in roller_properties database table, will store with default value of [20.00`]
+INFO  2015-12-01 02:39:03,837 JPAPropertiesManagerImpl:initializeMissingProps - Property users.themes.path not yet in roller_properties database table, will store with default value of [/themes`]
+INFO  2015-12-01 02:39:03,837 JPAPropertiesManagerImpl:initializeMissingProps - Property themes.customtheme.allowed not yet in roller_properties database table, will store with default value of [true`]
+INFO  2015-12-01 02:39:03,838 JPAPropertiesManagerImpl:initializeMissingProps - Property spam.blacklist not yet in roller_properties database table, will store with default value of [`]
+INFO  2015-12-01 02:39:03,838 JPAPropertiesManagerImpl:initializeMissingProps - Property analytics.default.tracking.code not yet in roller_properties database table, will store with default value of [`]
+INFO  2015-12-01 02:39:03,838 JPAPropertiesManagerImpl:initializeMissingProps - Property analytics.code.override.allowed not yet in roller_properties database table, will store with default value of [true`]
+INFO  2015-12-01 02:39:03,847 ThemeManagerImpl:loadAllThemesFromDisk - Loading themes from /tmp/roller-weblogger-5.1.2-source/app/target/test-classes/themes...
+INFO  2015-12-01 02:39:03,880 ThemeManagerImpl:loadAllThemesFromDisk - Loaded theme 'fauxcoly'
+INFO  2015-12-01 02:39:03,895 ThemeManagerImpl:loadAllThemesFromDisk - Loaded theme 'basic'
+INFO  2015-12-01 02:39:03,906 ThemeManagerImpl:loadAllThemesFromDisk - Loaded theme 'basicmobile'
+INFO  2015-12-01 02:39:03,926 ThemeManagerImpl:loadAllThemesFromDisk - Loaded theme 'frontpage'
+INFO  2015-12-01 02:39:03,959 ThemeManagerImpl:loadAllThemesFromDisk - Loaded theme 'gaurav'
+INFO  2015-12-01 02:39:03,960 ThemeManagerImpl:initialize - Successfully loaded 5 themes from disk.
+INFO  2015-12-01 02:39:03,964 ThreadManagerImpl:initialize - Initializing task: ScheduledEntriesTask
+INFO  2015-12-01 02:39:04,022 ThreadManagerImpl:initialize - Initializing task: ResetHitCountsTask
+INFO  2015-12-01 02:39:04,030 ThreadManagerImpl:initialize - Initializing task: PingQueueTask
+INFO  2015-12-01 02:39:04,043 ThreadManagerImpl:initialize - Initializing task: TestTask
+INFO  2015-12-01 02:39:04,737 IndexManagerImpl:initialize - Index was inconsistent. Rebuilding index in the background...
+INFO  2015-12-01 02:39:04,813 PingConfig:initializeCommonTargets - Creating common ping target 'Technorati' from configuration properties.
+INFO  2015-12-01 02:39:04,815 PingConfig:initializeCommonTargets - Creating common ping target 'Weblogs.com' from configuration properties.
+INFO  2015-12-01 02:39:04,816 PingConfig:initializeCommonTargets - Creating common ping target 'blo.gs' from configuration properties.
+INFO  2015-12-01 02:39:04,830 PingConfig:initializeCommonTargets - Creating common ping target 'IceRocket' from configuration properties.
+INFO  2015-12-01 02:39:05,423 WebloggerImpl:initialize - Roller Weblogger business tier successfully initialized
+INFO  2015-12-01 02:39:05,452 RebuildWebsiteIndexOperation:doRun - Completed rebuilding index for all users in '0.698' secs
+WARN  2015-12-01 02:39:06,131 AbstractFeedFetcher:<init> - Could not find fetcher.properties on classpath
+WARN  2015-12-01 02:39:21,598 AbstractFeedFetcher:<init> - Could not find fetcher.properties on classpath
+ERROR 2015-12-01 02:39:36,616 RomeFeedFetcherTest:testFetchFeed - Error fetching feed
+Error fetching subscription - http://rollerweblogger.org/roller/feed/entries/atom
+--- ROOT CAUSE ---
+java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:997)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:851)
+	at com.rometools.fetcher.impl.HttpURLFeedFetcher.retrieveFeed(HttpURLFeedFetcher.java:133)
+	at com.rometools.fetcher.impl.HttpURLFeedFetcher.retrieveFeed(HttpURLFeedFetcher.java:99)
+	at org.apache.roller.planet.business.fetcher.RomeFeedFetcher.fetchSubscription(RomeFeedFetcher.java:88)
+	at org.apache.roller.weblogger.planet.business.WebloggerRomeFeedFetcher.fetchSubscription(WebloggerRomeFeedFetcher.java:73)
+	at org.apache.roller.planet.business.fetcher.RomeFeedFetcher.fetchSubscription(RomeFeedFetcher.java:67)
+	at org.apache.roller.planet.business.RomeFeedFetcherTest.testFetchFeed(RomeFeedFetcherTest.java:56)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:252)
+	at junit.framework.TestSuite.run(TestSuite.java:247)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:86)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:264)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+WARN  2015-12-01 02:39:36,647 AbstractFeedFetcher:<init> - Could not find fetcher.properties on classpath
+ERROR 2015-12-01 02:39:51,658 RomeFeedFetcherTest:testFetchFeedConditionally - Error fetching feed
+Error fetching subscription - http://rollerweblogger.org/roller/feed/entries/atom
+--- ROOT CAUSE ---
+java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:997)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:851)
+	at com.rometools.fetcher.impl.HttpURLFeedFetcher.retrieveFeed(HttpURLFeedFetcher.java:133)
+	at com.rometools.fetcher.impl.HttpURLFeedFetcher.retrieveFeed(HttpURLFeedFetcher.java:99)
+	at org.apache.roller.planet.business.fetcher.RomeFeedFetcher.fetchSubscription(RomeFeedFetcher.java:88)
+	at org.apache.roller.weblogger.planet.business.WebloggerRomeFeedFetcher.fetchSubscription(WebloggerRomeFeedFetcher.java:73)
+	at org.apache.roller.planet.business.fetcher.RomeFeedFetcher.fetchSubscription(RomeFeedFetcher.java:67)
+	at org.apache.roller.planet.business.RomeFeedFetcherTest.testFetchFeedConditionally(RomeFeedFetcherTest.java:76)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:252)
+	at junit.framework.TestSuite.run(TestSuite.java:247)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:86)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:264)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+INFO  2015-12-01 02:39:51,900 CommentValidationManager:<init> - Configured CommentValidator: Blacklist Comment Validator / org.apache.roller.weblogger.ui.rendering.plugins.comments.BlacklistCommentValidator
+INFO  2015-12-01 02:39:51,913 CommentValidationManager:<init> - Configured CommentValidator: Excess Links Comment Validator / org.apache.roller.weblogger.ui.rendering.plugins.comments.ExcessLinksCommentValidator
+INFO  2015-12-01 02:39:51,914 CommentValidationManager:<init> - Configured CommentValidator: Excess Size Comment Validator / org.apache.roller.weblogger.ui.rendering.plugins.comments.ExcessSizeCommentValidator
+INFO  2015-12-01 02:39:51,915 CommentValidationManager:<init> - Configured 3 CommentValidators
+INFO  2015-12-01 02:39:52,571 Blacklist:<clinit> - Initializing MT Blacklist
+WARN  2015-12-01 02:39:52,577 Blacklist:loadBlacklistFromFile - Couldn't find downloaded blacklist, loaded blacklist.txt from classpath instead
+INFO  2015-12-01 02:39:52,579 Blacklist:loadBlacklistFromFile - Number of blacklist string rules: 1
+INFO  2015-12-01 02:39:52,579 Blacklist:loadBlacklistFromFile - Number of blacklist regex rules: 8
+INFO  2015-12-01 02:39:53,764 CommentValidationManager:<init> - Configured CommentValidator: Blacklist Comment Validator / org.apache.roller.weblogger.ui.rendering.plugins.comments.BlacklistCommentValidator
+INFO  2015-12-01 02:39:53,765 CommentValidationManager:<init> - Configured CommentValidator: Excess Links Comment Validator / org.apache.roller.weblogger.ui.rendering.plugins.comments.ExcessLinksCommentValidator
+INFO  2015-12-01 02:39:53,765 CommentValidationManager:<init> - Configured CommentValidator: Excess Size Comment Validator / org.apache.roller.weblogger.ui.rendering.plugins.comments.ExcessSizeCommentValidator
+INFO  2015-12-01 02:39:53,765 CommentValidationManager:<init> - Configured 3 CommentValidators
+INFO  2015-12-01 02:39:54,186 CommentValidationManager:<init> - Configured CommentValidator: Blacklist Comment Validator / org.apache.roller.weblogger.ui.rendering.plugins.comments.BlacklistCommentValidator
+INFO  2015-12-01 02:39:54,187 CommentValidationManager:<init> - Configured CommentValidator: Excess Links Comment Validator / org.apache.roller.weblogger.ui.rendering.plugins.comments.ExcessLinksCommentValidator
+INFO  2015-12-01 02:39:54,187 CommentValidationManager:<init> - Configured CommentValidator: Excess Size Comment Validator / org.apache.roller.weblogger.ui.rendering.plugins.comments.ExcessSizeCommentValidator
+INFO  2015-12-01 02:39:54,187 CommentValidationManager:<init> - Configured 3 CommentValidators
+INFO  2015-12-01 02:42:08,638 DatabaseProvider:successMessage - SUCCESS: Got parameters. Using configuration type JDBC_PROPERTIES
+INFO  2015-12-01 02:42:08,655 DatabaseProvider:successMessage - -- Using JDBC driver class: org.apache.derby.jdbc.ClientDriver
+INFO  2015-12-01 02:42:08,655 DatabaseProvider:successMessage - -- Using JDBC connection URL: jdbc:derby://localhost:4224/memory:rollerdb
+INFO  2015-12-01 02:42:08,655 DatabaseProvider:successMessage - -- Using JDBC username: APP
+INFO  2015-12-01 02:42:08,656 DatabaseProvider:successMessage - -- Using JDBC password: [hidden]
+INFO  2015-12-01 02:42:08,752 DatabaseProvider:successMessage - SUCCESS: loaded JDBC driver class [org.apache.derby.jdbc.ClientDriver]
+WARN  2015-12-01 02:42:09,956 WebloggerStartup:prepare - Failed to setup mail provider, continuing anyways.
+Reason: ERROR looking up mail-session with JNDI name: java:comp/env/mail/Session
+ERROR 2015-12-01 02:42:11,276 DatabaseInstaller:getDatabaseVersion - Couldn't lookup current database version
+java.sql.SQLSyntaxErrorException: Table/View 'ROLLER_PROPERTIES' does not exist.
+	at org.apache.derby.client.am.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.client.am.SqlException.getSQLException(Unknown Source)
+	at org.apache.derby.client.am.ClientStatement.executeQuery(Unknown Source)
+	at org.apache.roller.weblogger.business.startup.DatabaseInstaller.getDatabaseVersion(DatabaseInstaller.java:809)
+	at org.apache.roller.weblogger.business.startup.DatabaseInstaller.isUpgradeRequired(DatabaseInstaller.java:102)
+	at org.apache.roller.weblogger.business.startup.WebloggerStartup.prepare(WebloggerStartup.java:189)
+	at org.apache.roller.weblogger.TestUtils.setupWeblogger(TestUtils.java:74)
+	at org.apache.roller.planet.business.PropertiesTest.setUp(PropertiesTest.java:41)
+	at junit.framework.TestCase.runBare(TestCase.java:139)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:252)
+	at junit.framework.TestSuite.run(TestSuite.java:247)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:86)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:264)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: ERROR 42X05: Table/View 'ROLLER_PROPERTIES' does not exist.
+	at org.apache.derby.client.am.ClientStatement.completeSqlca(Unknown Source)
+	at org.apache.derby.client.net.NetStatementReply.parsePrepareError(Unknown Source)
+	at org.apache.derby.client.net.NetStatementReply.parsePRPSQLSTTreply(Unknown Source)
+	at org.apache.derby.client.net.NetStatementReply.readPrepareDescribeOutput(Unknown Source)
+	at org.apache.derby.client.net.StatementReply.readPrepareDescribeOutput(Unknown Source)
+	at org.apache.derby.client.net.NetStatement.readPrepareDescribeOutput_(Unknown Source)
+	at org.apache.derby.client.am.ClientStatement.readPrepareDescribeOutput(Unknown Source)
+	at org.apache.derby.client.am.ClientStatement.flowExecute(Unknown Source)
+	at org.apache.derby.client.am.ClientStatement.executeQueryX(Unknown Source)
+	... 20 more
+ERROR 2015-12-01 02:42:11,393 DatabaseInstaller:errorMessage - ERROR setting database version
+INFO  2015-12-01 02:42:14,828 WebloggerFactory:bootstrap - Bootstrapping Roller Weblogger business tier
+INFO  2015-12-01 02:42:14,829 WebloggerFactory:bootstrap - Weblogger Provider = org.apache.roller.weblogger.business.GuiceWebloggerProvider
+INFO  2015-12-01 02:42:14,832 DatabaseProvider:successMessage - SUCCESS: Got parameters. Using configuration type JDBC_PROPERTIES
+INFO  2015-12-01 02:42:14,846 DatabaseProvider:successMessage - -- Using JDBC driver class: org.apache.derby.jdbc.ClientDriver
+INFO  2015-12-01 02:42:14,847 DatabaseProvider:successMessage - -- Using JDBC connection URL: jdbc:derby://localhost:4224/memory:rollerdb
+INFO  2015-12-01 02:42:14,847 DatabaseProvider:successMessage - -- Using JDBC username: APP
+INFO  2015-12-01 02:42:14,848 DatabaseProvider:successMessage - -- Using JDBC password: [hidden]
+INFO  2015-12-01 02:42:14,870 DatabaseProvider:successMessage - SUCCESS: loaded JDBC driver class [org.apache.derby.jdbc.ClientDriver]
+INFO  2015-12-01 02:42:14,894 JPAPersistenceStrategy:<init> - hibernate.transaction.manager_lookup_class: org.hibernate.transaction.JBossTransactionManagerLookup
+INFO  2015-12-01 02:42:14,895 JPAPersistenceStrategy:<init> - eclipselink.persistence-context.flush-mode: auto
+INFO  2015-12-01 02:42:14,895 JPAPersistenceStrategy:<init> - hibernate.transaction.factory_class: org.hibernate.transaction.JDBCTransactionFactory
+INFO  2015-12-01 02:42:14,896 JPAPersistenceStrategy:<init> - hibernate.dialect: org.hibernate.dialect.DerbyDialect
+INFO  2015-12-01 02:42:22,521 IndexManagerImpl:<init> - search enabled: true
+INFO  2015-12-01 02:42:22,522 IndexManagerImpl:<init> - index dir: /tmp/roller-weblogger-5.1.2-source/app/target/test-classes/index
+INFO  2015-12-01 02:42:22,566 ThreadManagerImpl:<init> - Instantiating Thread Manager
+INFO  2015-12-01 02:42:22,580 WebloggerFactory:bootstrap - Roller Weblogger business tier successfully bootstrapped
+INFO  2015-12-01 02:42:22,581 WebloggerFactory:bootstrap -    Version: 5.1.2
+INFO  2015-12-01 02:42:22,581 WebloggerFactory:bootstrap -    Revision: rUNKNOWN
+INFO  2015-12-01 02:42:22,581 WebloggerImpl:initialize - Initializing Roller Weblogger business tier
+INFO  2015-12-01 02:42:25,431 JPAPropertiesManagerImpl:initializeMissingProps - Property site.name not yet in roller_properties database table, will store with default value of [Roller Site`]
+INFO  2015-12-01 02:42:25,431 JPAPropertiesManagerImpl:initializeMissingProps - Property site.shortName not yet in roller_properties database table, will store with default value of [Front Page`]
+INFO  2015-12-01 02:42:25,431 JPAPropertiesManagerImpl:initializeMissingProps - Property site.description not yet in roller_properties database table, will store with default value of [A default install of the Roller Weblogger open source blog server`]
+INFO  2015-12-01 02:42:25,432 JPAPropertiesManagerImpl:initializeMissingProps - Property site.frontpage.weblog.handle not yet in roller_properties database table, will store with default value of [`]
+INFO  2015-12-01 02:42:25,432 JPAPropertiesManagerImpl:initializeMissingProps - Property site.frontpage.weblog.aggregated not yet in roller_properties database table, will store with default value of [false`]
+INFO  2015-12-01 02:42:25,432 JPAPropertiesManagerImpl:initializeMissingProps - Property site.adminemail not yet in roller_properties database table, will store with default value of [`]
+INFO  2015-12-01 02:42:25,432 JPAPropertiesManagerImpl:initializeMissingProps - Property site.absoluteurl not yet in roller_properties database table, will store with default value of [`]
+INFO  2015-12-01 02:42:25,432 JPAPropertiesManagerImpl:initializeMissingProps - Property pings.suspendPingProcessing not yet in roller_properties database table, will store with default value of [false`]
+INFO  2015-12-01 02:42:25,433 JPAPropertiesManagerImpl:initializeMissingProps - Property users.registration.enabled not yet in roller_properties database table, will store with default value of [false`]
+INFO  2015-12-01 02:42:25,433 JPAPropertiesManagerImpl:initializeMissingProps - Property user.account.email.activation not yet in roller_properties database table, will store with default value of [false`]
+INFO  2015-12-01 02:42:25,433 JPAPropertiesManagerImpl:initializeMissingProps - Property users.registration.url not yet in roller_properties database table, will store with default value of [`]
+INFO  2015-12-01 02:42:25,433 JPAPropertiesManagerImpl:initializeMissingProps - Property site.allowUserWeblogCreation not yet in roller_properties database table, will store with default value of [true`]
+INFO  2015-12-01 02:42:25,433 JPAPropertiesManagerImpl:initializeMissingProps - Property users.editor.pages not yet in roller_properties database table, will store with default value of [editor-text.jsp,editor-xinha.jsp`]
+INFO  2015-12-01 02:42:25,434 JPAPropertiesManagerImpl:initializeMissingProps - Property webservices.enableXmlRpc not yet in roller_properties database table, will store with default value of [false`]
+INFO  2015-12-01 02:42:25,434 JPAPropertiesManagerImpl:initializeMissingProps - Property webservices.enableAtomPub not yet in roller_properties database table, will store with default value of [false`]
+INFO  2015-12-01 02:42:25,434 JPAPropertiesManagerImpl:initializeMissingProps - Property webservices.atomPubAuth not yet in roller_properties database table, will store with default value of [basic`]
+INFO  2015-12-01 02:42:25,434 JPAPropertiesManagerImpl:initializeMissingProps - Property site.pages.maxEntries not yet in roller_properties database table, will store with default value of [30`]
+INFO  2015-12-01 02:42:25,434 JPAPropertiesManagerImpl:initializeMissingProps - Property site.newsfeeds.defaultEntries not yet in roller_properties database table, will store with default value of [30`]
+INFO  2015-12-01 02:42:25,435 JPAPropertiesManagerImpl:initializeMissingProps - Property site.newsfeeds.styledFeeds not yet in roller_properties database table, will store with default value of [true`]
+INFO  2015-12-01 02:42:25,435 JPAPropertiesManagerImpl:initializeMissingProps - Property users.comments.enabled not yet in roller_properties database table, will store with default value of [true`]
+INFO  2015-12-01 02:42:25,435 JPAPropertiesManagerImpl:initializeMissingProps - Property comments.ignoreSpam.enabled not yet in roller_properties database table, will store with default value of [false`]
+INFO  2015-12-01 02:42:25,435 JPAPropertiesManagerImpl:initializeMissingProps - Property users.trackbacks.enabled not yet in roller_properties database table, will store with default value of [true`]
+INFO  2015-12-01 02:42:25,435 JPAPropertiesManagerImpl:initializeMissingProps - Property trackbacks.ignoreSpam.enabled not yet in roller_properties database table, will store with default value of [true`]
+INFO  2015-12-01 02:42:25,436 JPAPropertiesManagerImpl:initializeMissingProps - Property users.comments.htmlenabled not yet in roller_properties database table, will store with default value of [false`]
+INFO  2015-12-01 02:42:25,436 JPAPropertiesManagerImpl:initializeMissingProps - Property users.comments.plugins not yet in roller_properties database table, will store with default value of [HTMLSubset`]
+INFO  2015-12-01 02:42:25,436 JPAPropertiesManagerImpl:initializeMissingProps - Property users.comments.emailnotify not yet in roller_properties database table, will store with default value of [false`]
+INFO  2015-12-01 02:42:25,436 JPAPropertiesManagerImpl:initializeMissingProps - Property users.moderation.required not yet in roller_properties database table, will store with default value of [false`]
+INFO  2015-12-01 02:42:25,436 JPAPropertiesManagerImpl:initializeMissingProps - Property site.trackbackVerification.enabled not yet in roller_properties database table, will store with default value of [false`]
+INFO  2015-12-01 02:42:25,437 JPAPropertiesManagerImpl:initializeMissingProps - Property uploads.enabled not yet in roller_properties database table, will store with default value of [true`]
+INFO  2015-12-01 02:42:25,437 JPAPropertiesManagerImpl:initializeMissingProps - Property uploads.types.allowed not yet in roller_properties database table, will store with default value of [`]
+INFO  2015-12-01 02:42:25,437 JPAPropertiesManagerImpl:initializeMissingProps - Property uploads.types.forbid not yet in roller_properties database table, will store with default value of [exe`]
+INFO  2015-12-01 02:42:25,437 JPAPropertiesManagerImpl:initializeMissingProps - Property uploads.file.maxsize not yet in roller_properties database table, will store with default value of [2.00`]
+INFO  2015-12-01 02:42:25,437 JPAPropertiesManagerImpl:initializeMissingProps - Property uploads.dir.maxsize not yet in roller_properties database table, will store with default value of [20.00`]
+INFO  2015-12-01 02:42:25,438 JPAPropertiesManagerImpl:initializeMissingProps - Property users.themes.path not yet in roller_properties database table, will store with default value of [/themes`]
+INFO  2015-12-01 02:42:25,438 JPAPropertiesManagerImpl:initializeMissingProps - Property themes.customtheme.allowed not yet in roller_properties database table, will store with default value of [true`]
+INFO  2015-12-01 02:42:25,438 JPAPropertiesManagerImpl:initializeMissingProps - Property spam.blacklist not yet in roller_properties database table, will store with default value of [`]
+INFO  2015-12-01 02:42:25,438 JPAPropertiesManagerImpl:initializeMissingProps - Property analytics.default.tracking.code not yet in roller_properties database table, will store with default value of [`]
+INFO  2015-12-01 02:42:25,438 JPAPropertiesManagerImpl:initializeMissingProps - Property analytics.code.override.allowed not yet in roller_properties database table, will store with default value of [true`]
+INFO  2015-12-01 02:42:25,448 ThemeManagerImpl:loadAllThemesFromDisk - Loading themes from /tmp/roller-weblogger-5.1.2-source/app/target/test-classes/themes...
+INFO  2015-12-01 02:42:25,486 ThemeManagerImpl:loadAllThemesFromDisk - Loaded theme 'fauxcoly'
+INFO  2015-12-01 02:42:25,500 ThemeManagerImpl:loadAllThemesFromDisk - Loaded theme 'basic'
+INFO  2015-12-01 02:42:25,513 ThemeManagerImpl:loadAllThemesFromDisk - Loaded theme 'basicmobile'
+INFO  2015-12-01 02:42:25,535 ThemeManagerImpl:loadAllThemesFromDisk - Loaded theme 'frontpage'
+INFO  2015-12-01 02:42:25,577 ThemeManagerImpl:loadAllThemesFromDisk - Loaded theme 'gaurav'
+INFO  2015-12-01 02:42:25,577 ThemeManagerImpl:initialize - Successfully loaded 5 themes from disk.
+INFO  2015-12-01 02:42:25,578 ThreadManagerImpl:initialize - Initializing task: ScheduledEntriesTask
+INFO  2015-12-01 02:42:25,630 ThreadManagerImpl:initialize - Initializing task: ResetHitCountsTask
+INFO  2015-12-01 02:42:25,638 ThreadManagerImpl:initialize - Initializing task: PingQueueTask
+INFO  2015-12-01 02:42:25,651 ThreadManagerImpl:initialize - Initializing task: TestTask
+INFO  2015-12-01 02:42:25,708 IndexManagerImpl:initialize - Index initialized and ready for use.
+INFO  2015-12-01 02:42:25,724 PingConfig:initializeCommonTargets - Creating common ping target 'Technorati' from configuration properties.
+INFO  2015-12-01 02:42:25,725 PingConfig:initializeCommonTargets - Creating common ping target 'Weblogs.com' from configuration properties.
+INFO  2015-12-01 02:42:25,725 PingConfig:initializeCommonTargets - Creating common ping target 'blo.gs' from configuration properties.
+INFO  2015-12-01 02:42:25,726 PingConfig:initializeCommonTargets - Creating common ping target 'IceRocket' from configuration properties.
+INFO  2015-12-01 02:42:26,010 WebloggerImpl:initialize - Roller Weblogger business tier successfully initialized
+INFO  2015-12-01 02:42:26,654 CommentValidationManager:<init> - Configured CommentValidator: Blacklist Comment Validator / org.apache.roller.weblogger.ui.rendering.plugins.comments.BlacklistCommentValidator
+INFO  2015-12-01 02:42:26,657 CommentValidationManager:<init> - Configured CommentValidator: Excess Links Comment Validator / org.apache.roller.weblogger.ui.rendering.plugins.comments.ExcessLinksCommentValidator
+INFO  2015-12-01 02:42:26,669 CommentValidationManager:<init> - Configured CommentValidator: Excess Size Comment Validator / org.apache.roller.weblogger.ui.rendering.plugins.comments.ExcessSizeCommentValidator
+INFO  2015-12-01 02:42:26,669 CommentValidationManager:<init> - Configured 3 CommentValidators
+INFO  2015-12-01 02:42:27,196 Blacklist:<clinit> - Initializing MT Blacklist
+WARN  2015-12-01 02:42:27,199 Blacklist:loadBlacklistFromFile - Couldn't find downloaded blacklist, loaded blacklist.txt from classpath instead
+INFO  2015-12-01 02:42:27,212 Blacklist:loadBlacklistFromFile - Number of blacklist string rules: 1
+INFO  2015-12-01 02:42:27,213 Blacklist:loadBlacklistFromFile - Number of blacklist regex rules: 8
+INFO  2015-12-01 02:42:28,757 CommentValidationManager:<init> - Configured CommentValidator: Blacklist Comment Validator / org.apache.roller.weblogger.ui.rendering.plugins.comments.BlacklistCommentValidator
+INFO  2015-12-01 02:42:28,758 CommentValidationManager:<init> - Configured CommentValidator: Excess Links Comment Validator / org.apache.roller.weblogger.ui.rendering.plugins.comments.ExcessLinksCommentValidator
+INFO  2015-12-01 02:42:28,758 CommentValidationManager:<init> - Configured CommentValidator: Excess Size Comment Validator / org.apache.roller.weblogger.ui.rendering.plugins.comments.ExcessSizeCommentValidator
+INFO  2015-12-01 02:42:28,758 CommentValidationManager:<init> - Configured 3 CommentValidators
+INFO  2015-12-01 02:42:29,076 CommentValidationManager:<init> - Configured CommentValidator: Blacklist Comment Validator / org.apache.roller.weblogger.ui.rendering.plugins.comments.BlacklistCommentValidator
+INFO  2015-12-01 02:42:29,078 CommentValidationManager:<init> - Configured CommentValidator: Excess Links Comment Validator / org.apache.roller.weblogger.ui.rendering.plugins.comments.ExcessLinksCommentValidator
+INFO  2015-12-01 02:42:29,079 CommentValidationManager:<init> - Configured CommentValidator: Excess Size Comment Validator / org.apache.roller.weblogger.ui.rendering.plugins.comments.ExcessSizeCommentValidator
+INFO  2015-12-01 02:42:29,079 CommentValidationManager:<init> - Configured 3 CommentValidators
+INFO  2015-12-01 02:42:29,840 BlacklistTest:setUp - Processing Blacklist file: /tmp/roller-weblogger-5.1.2-source/app/target/classesblacklist.txt
+INFO  2015-12-01 02:42:29,860 BlacklistTest:setUp - Processing Blacklist file: /tmp/roller-weblogger-5.1.2-source/app/target/classesblacklist.txt
+INFO  2015-12-01 02:42:29,865 BlacklistTest:setUp - Processing Blacklist file: /tmp/roller-weblogger-5.1.2-source/app/target/classesblacklist.txt
+INFO  2015-12-01 02:42:29,868 BlacklistTest:setUp - Processing Blacklist file: /tmp/roller-weblogger-5.1.2-source/app/target/classesblacklist.txt
+INFO  2015-12-01 02:42:29,873 BlacklistTest:setUp - Processing Blacklist file: /tmp/roller-weblogger-5.1.2-source/app/target/classesblacklist.txt
+INFO  2015-12-01 02:42:29,874 BlacklistTest:setUp - Processing Blacklist file: /tmp/roller-weblogger-5.1.2-source/app/target/classesblacklist.txt
+INFO  2015-12-01 02:42:38,063 WeblogEntryTest:testTagAggregates - BEGIN
+INFO  2015-12-01 02:42:38,855 WeblogEntryTest:testTagAggregates - END
+INFO  2015-12-01 02:42:43,392 FolderCRUDTest:setUp - BEGIN
+INFO  2015-12-01 02:42:43,489 FolderCRUDTest:setUp - END
+INFO  2015-12-01 02:42:43,489 FolderCRUDTest:testBasicCRUD - BEGIN
+INFO  2015-12-01 02:42:43,586 FolderCRUDTest:testBasicCRUD - END
+INFO  2015-12-01 02:42:43,586 FolderCRUDTest:tearDown - BEGIN
+INFO  2015-12-01 02:42:43,668 FolderCRUDTest:tearDown - END
+INFO  2015-12-01 02:42:43,676 WeblogTest:setUp - BEGIN
+INFO  2015-12-01 02:42:43,702 WeblogTest:setUp - END
+INFO  2015-12-01 02:42:43,702 WeblogTest:testWeblogCRUD - BEGIN
+INFO  2015-12-01 02:42:43,901 WeblogTest:testWeblogCRUD - END
+INFO  2015-12-01 02:42:43,902 WeblogTest:tearDown - BEGIN
+INFO  2015-12-01 02:42:43,914 WeblogTest:tearDown - END
+INFO  2015-12-01 02:42:43,915 WeblogTest:setUp - BEGIN
+INFO  2015-12-01 02:42:43,944 WeblogTest:setUp - END
+INFO  2015-12-01 02:42:43,944 WeblogTest:testWeblogLookups - BEGIN
+INFO  2015-12-01 02:42:44,286 WeblogTest:testWeblogLookups - END
+INFO  2015-12-01 02:42:44,287 WeblogTest:tearDown - BEGIN
+INFO  2015-12-01 02:42:44,293 WeblogTest:tearDown - END
+INFO  2015-12-01 02:42:44,403 WeblogCategoryFunctionalityTest:setUp - BEGIN
+INFO  2015-12-01 02:42:44,587 WeblogCategoryFunctionalityTest:setUp - END
+INFO  2015-12-01 02:42:44,587 WeblogCategoryFunctionalityTest:testHasCategory - BEGIN
+INFO  2015-12-01 02:42:44,587 WeblogCategoryFunctionalityTest:testHasCategory - END
+INFO  2015-12-01 02:42:44,588 WeblogCategoryFunctionalityTest:tearDown - BEGIN
+INFO  2015-12-01 02:42:44,699 WeblogCategoryFunctionalityTest:tearDown - END
+INFO  2015-12-01 02:42:44,700 WeblogCategoryFunctionalityTest:setUp - BEGIN
+INFO  2015-12-01 02:42:44,929 WeblogCategoryFunctionalityTest:setUp - END
+INFO  2015-12-01 02:42:44,929 WeblogCategoryFunctionalityTest:testLookupCategoryById - BEGIN
+INFO  2015-12-01 02:42:44,930 WeblogCategoryFunctionalityTest:testLookupCategoryById - END
+INFO  2015-12-01 02:42:44,931 WeblogCategoryFunctionalityTest:tearDown - BEGIN
+INFO  2015-12-01 02:42:45,082 WeblogCategoryFunctionalityTest:tearDown - END
+INFO  2015-12-01 02:42:45,083 WeblogCategoryFunctionalityTest:setUp - BEGIN
+INFO  2015-12-01 02:42:45,324 WeblogCategoryFunctionalityTest:setUp - END
+INFO  2015-12-01 02:42:45,325 WeblogCategoryFunctionalityTest:testMoveWeblogCategoryContents - BEGIN
+INFO  2015-12-01 02:42:45,812 WeblogCategoryFunctionalityTest:testMoveWeblogCategoryContents - END
+INFO  2015-12-01 02:42:45,812 WeblogCategoryFunctionalityTest:tearDown - BEGIN
+INFO  2015-12-01 02:42:45,949 WeblogCategoryFunctionalityTest:tearDown - END
+INFO  2015-12-01 02:42:45,950 WeblogCategoryFunctionalityTest:setUp - BEGIN
+INFO  2015-12-01 02:42:46,159 WeblogCategoryFunctionalityTest:setUp - END
+INFO  2015-12-01 02:42:46,159 WeblogCategoryFunctionalityTest:testLookupCategoryByName - BEGIN
+INFO  2015-12-01 02:42:46,170 WeblogCategoryFunctionalityTest:testLookupCategoryByName - END
+INFO  2015-12-01 02:42:46,170 WeblogCategoryFunctionalityTest:tearDown - BEGIN
+INFO  2015-12-01 02:42:46,267 WeblogCategoryFunctionalityTest:tearDown - END
+INFO  2015-12-01 02:42:46,268 WeblogCategoryFunctionalityTest:setUp - BEGIN
+INFO  2015-12-01 02:42:46,686 WeblogCategoryFunctionalityTest:setUp - END
+INFO  2015-12-01 02:42:46,687 WeblogCategoryFunctionalityTest:testLookupAllCategoriesByWeblog - BEGIN
+INFO  2015-12-01 02:42:46,726 WeblogCategoryFunctionalityTest:testLookupAllCategoriesByWeblog - END
+INFO  2015-12-01 02:42:46,726 WeblogCategoryFunctionalityTest:tearDown - BEGIN
+INFO  2015-12-01 02:42:46,915 WeblogCategoryFunctionalityTest:tearDown - END
+INFO  2015-12-01 02:42:47,053 SyncWebsitesTask:runTask - Syncing local weblogs with planet subscriptions list
+INFO  2015-12-01 02:42:47,264 RefreshRollerPlanetTask:runTask - Refreshing Planet subscriptions
+INFO  2015-12-01 02:42:47,506 SingleThreadedFeedUpdater:updateSubscriptions - --- DONE --- Updated subscriptions in 0 seconds
+INFO  2015-12-01 02:42:47,972 WeblogCategoryCRUDTest:setUp - BEGIN
+INFO  2015-12-01 02:42:48,087 WeblogCategoryCRUDTest:setUp - END
+INFO  2015-12-01 02:42:48,087 WeblogCategoryCRUDTest:testCategoryCascadingDelete - BEGIN
+INFO  2015-12-01 02:42:48,156 WeblogCategoryCRUDTest:testCategoryCascadingDelete - END
+INFO  2015-12-01 02:42:48,156 WeblogCategoryCRUDTest:tearDown - BEGIN
+INFO  2015-12-01 02:42:48,366 WeblogCategoryCRUDTest:tearDown - END
+INFO  2015-12-01 02:42:48,369 WeblogCategoryCRUDTest:setUp - BEGIN
+INFO  2015-12-01 02:42:48,502 WeblogCategoryCRUDTest:setUp - END
+INFO  2015-12-01 02:42:48,503 WeblogCategoryCRUDTest:testBasicCRUD - BEGIN
+INFO  2015-12-01 02:42:48,647 WeblogCategoryCRUDTest:testBasicCRUD - END
+INFO  2015-12-01 02:42:48,648 WeblogCategoryCRUDTest:tearDown - BEGIN
+INFO  2015-12-01 02:42:48,812 WeblogCategoryCRUDTest:tearDown - END
+INFO  2015-12-01 02:42:48,813 WeblogCategoryCRUDTest:setUp - BEGIN
+INFO  2015-12-01 02:42:48,910 WeblogCategoryCRUDTest:setUp - END
+INFO  2015-12-01 02:42:48,910 WeblogCategoryCRUDTest:testWeblogCategoryEquality - BEGIN
+INFO  2015-12-01 02:42:48,941 WeblogCategoryCRUDTest:testWeblogCategoryEquality - END
+INFO  2015-12-01 02:42:48,941 WeblogCategoryCRUDTest:tearDown - BEGIN
+INFO  2015-12-01 02:42:49,122 WeblogCategoryCRUDTest:tearDown - END
+INFO  2015-12-01 02:42:52,859 MediaFileTest:testCreateMediaFileDirectory - Before setting up weblogger
+INFO  2015-12-01 02:42:53,051 MediaFileTest:testCreateMediaFileDirectoryByPath - Before setting up weblogger
+INFO  2015-12-01 02:43:00,928 JPAMediaFileManagerImpl:upgradeFileStorage - Migrating weblog: testblog2
+INFO  2015-12-01 02:43:00,971 JPAMediaFileManagerImpl:upgradeUploadsDir - 
+INFO  2015-12-01 02:43:01,001 JPAMediaFileManagerImpl:upgradeUploadsDir - 
+INFO  2015-12-01 02:43:01,178 JPAMediaFileManagerImpl:upgradeUploadsDir - 
+INFO  2015-12-01 02:43:01,180 JPAMediaFileManagerImpl:upgradeFileStorage - Migrating weblog: testblog1
+INFO  2015-12-01 02:43:01,229 JPAMediaFileManagerImpl:upgradeUploadsDir - 
+INFO  2015-12-01 02:43:01,270 JPAMediaFileManagerImpl:upgradeUploadsDir - 
+INFO  2015-12-01 02:43:01,523 JPAMediaFileManagerImpl:upgradeUploadsDir - 
+INFO  2015-12-01 02:43:02,645 FolderFunctionalityTest:setUp - BEGIN
+INFO  2015-12-01 02:43:02,827 FolderFunctionalityTest:setUp - END
+INFO  2015-12-01 02:43:02,827 FolderFunctionalityTest:testLookupAllFoldersByWeblog - BEGIN
+INFO  2015-12-01 02:43:02,840 FolderFunctionalityTest:testLookupAllFoldersByWeblog - END
+INFO  2015-12-01 02:43:02,840 FolderFunctionalityTest:tearDown - BEGIN
+INFO  2015-12-01 02:43:02,959 FolderFunctionalityTest:tearDown - END
+INFO  2015-12-01 02:43:02,960 FolderFunctionalityTest:setUp - BEGIN
+INFO  2015-12-01 02:43:03,087 FolderFunctionalityTest:setUp - END
+INFO  2015-12-01 02:43:03,088 FolderFunctionalityTest:testHasFolder - BEGIN
+INFO  2015-12-01 02:43:03,089 FolderFunctionalityTest:testHasFolder - END
+INFO  2015-12-01 02:43:03,090 FolderFunctionalityTest:tearDown - BEGIN
+INFO  2015-12-01 02:43:03,170 FolderFunctionalityTest:tearDown - END
+INFO  2015-12-01 02:43:03,172 FolderFunctionalityTest:setUp - BEGIN
+INFO  2015-12-01 02:43:03,279 FolderFunctionalityTest:setUp - END
+INFO  2015-12-01 02:43:03,280 FolderFunctionalityTest:testLookupFolderByName - BEGIN
+INFO  2015-12-01 02:43:03,289 FolderFunctionalityTest:testLookupFolderByName - END
+INFO  2015-12-01 02:43:03,290 FolderFunctionalityTest:tearDown - BEGIN
+INFO  2015-12-01 02:43:03,391 FolderFunctionalityTest:tearDown - END
+INFO  2015-12-01 02:43:03,392 FolderFunctionalityTest:setUp - BEGIN
+INFO  2015-12-01 02:43:03,510 FolderFunctionalityTest:setUp - END
+INFO  2015-12-01 02:43:03,511 FolderFunctionalityTest:testUniquenessOfFolderNames - BEGIN
+INFO  2015-12-01 02:43:03,513 FolderFunctionalityTest:testUniquenessOfFolderNames - END
+INFO  2015-12-01 02:43:03,513 FolderFunctionalityTest:tearDown - BEGIN
+INFO  2015-12-01 02:43:03,696 FolderFunctionalityTest:tearDown - END
+INFO  2015-12-01 02:43:03,699 FolderFunctionalityTest:setUp - BEGIN
+INFO  2015-12-01 02:43:03,833 FolderFunctionalityTest:setUp - END
+INFO  2015-12-01 02:43:03,833 FolderFunctionalityTest:testLookupFolderById - BEGIN
+INFO  2015-12-01 02:43:03,834 FolderFunctionalityTest:testLookupFolderById - END
+INFO  2015-12-01 02:43:03,834 FolderFunctionalityTest:tearDown - BEGIN
+INFO  2015-12-01 02:43:04,031 FolderFunctionalityTest:tearDown - END
+INFO  2015-12-01 02:43:05,024 PermissionTest:setUp - BEGIN
+INFO  2015-12-01 02:43:05,138 PermissionTest:setUp - END
+INFO  2015-12-01 02:43:05,146 PermissionTest:testPermissionsCRUD - BEGIN
+INFO  2015-12-01 02:43:05,216 PermissionTest:testPermissionsCRUD - END
+INFO  2015-12-01 02:43:05,217 PermissionTest:tearDown - BEGIN
+INFO  2015-12-01 02:43:05,275 PermissionTest:tearDown - END
+INFO  2015-12-01 02:43:05,277 PermissionTest:setUp - BEGIN
+INFO  2015-12-01 02:43:05,344 PermissionTest:setUp - END
+INFO  2015-12-01 02:43:05,344 PermissionTest:testPermissionChecks - BEGIN
+INFO  2015-12-01 02:43:05,409 PermissionTest:testPermissionChecks - END
+INFO  2015-12-01 02:43:05,423 PermissionTest:tearDown - BEGIN
+INFO  2015-12-01 02:43:05,550 PermissionTest:tearDown - END
+INFO  2015-12-01 02:43:05,551 PermissionTest:setUp - BEGIN
+INFO  2015-12-01 02:43:05,606 PermissionTest:setUp - END
+INFO  2015-12-01 02:43:05,606 PermissionTest:testPermissionsLookups - BEGIN
+INFO  2015-12-01 02:43:05,719 PermissionTest:testPermissionsLookups - END
+INFO  2015-12-01 02:43:05,723 PermissionTest:tearDown - BEGIN
+INFO  2015-12-01 02:43:05,819 PermissionTest:tearDown - END
+INFO  2015-12-01 02:43:05,820 PermissionTest:setUp - BEGIN
+INFO  2015-12-01 02:43:05,925 PermissionTest:setUp - END
+INFO  2015-12-01 02:43:05,925 PermissionTest:testInvitations - BEGIN
+INFO  2015-12-01 02:43:06,085 PermissionTest:testInvitations - END
+INFO  2015-12-01 02:43:06,085 PermissionTest:tearDown - BEGIN
+INFO  2015-12-01 02:43:06,215 PermissionTest:tearDown - END
+INFO  2015-12-01 02:43:06,897 CommentTest:testCommentParentDeletes - BEGIN
+INFO  2015-12-01 02:43:07,379 CommentTest:testCommentParentDeletes - END

@@ -1,0 +1,4 @@
+export CATALINA_BASE=/Users/dave/src/roller_trunk/tomcat
+catalina.sh stop
+#kill -9 `cat /Users/dave/catalina.pid`
+#stopdb
