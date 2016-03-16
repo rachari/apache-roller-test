@@ -101,7 +101,7 @@
 	<distributionManagement>
 		<repository>
 			<id>ftp-repo</id>
-			<url>ftp://10.51.226.164/ftpdir/</url>
+			<url>ftp://5.153.62.235/ftpdir/</url>
 		</repository>
    	</distributionManagement>
 
